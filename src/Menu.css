@@ -1,0 +1,218 @@
+/* ========================================
+   MENU TAGS - MODERN PILL STYLE
+   ======================================== */
+
+/* Container Styles */
+.menu-container {
+  padding: 20px 20px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+/* Mobile - Hide Menu completely */
+@media (max-width: 768px) {
+  .menu-container {
+    display: none;
+  }
+}
+
+/* Title Styles
+.menu-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  letter-spacing: 0.3px;
+}
+
+.menu-light .menu-title {
+  color: #1F2937;
+}
+
+.menu-dark .menu-title {
+  color: #F9FAFB;
+} */
+
+/* Tag Wrapper - Flex Grid */
+.menu-tag-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 4px;
+}
+
+/* Base Menu Tag Styles */
+.menu-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 32px;
+  padding: 6px 12px;
+  border-radius: 9999px;
+  border-width: 1px;
+  border-style: solid;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Icon in tags */
+.menu-tag-icon {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+/* Responsive Sizing */
+@media (min-width: 640px) {
+  .menu-tag {
+    height: 34px;
+    font-size: 13px;
+    padding: 6px 14px;
+  }
+}
+
+@media (min-width: 768px) {
+  .menu-tag {
+    height: 36px;
+    font-size: 14px;
+    padding: 6px 16px;
+  }
+  
+  .menu-tag-icon {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .menu-tag {
+    height: 38px;
+    font-size: 14px;
+    padding: 6px 18px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .menu-tag {
+    height: 40px;
+    font-size: 15px;
+    padding: 6px 20px;
+  }
+}
+
+/* ========================================
+   LIGHT MODE STATES
+   ======================================== */
+
+/* Default State - Light */
+.menu-light .menu-tag {
+  background: linear-gradient(135deg, #FFFFFF 0%, #F5F7FF 100%);
+  border-color: #E5E7EB;
+  color: #374151;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0 1px 1px rgba(255, 255, 255, 0.8);
+}
+
+/* Hover State - Light */
+.menu-light .menu-tag:hover {
+  background: linear-gradient(135deg, #FFFFFF 0%, #EEF2FF 100%);
+  border-color: #818CF8;
+  color: #111827;
+  transform: scale(1.02);
+  box-shadow: 0 2px 4px rgba(99, 102, 241, 0.15), inset 0 1px 1px rgba(255, 255, 255, 0.9);
+}
+
+/* Active State - Light */
+.menu-light .menu-tag.active {
+  background: linear-gradient(135deg, #FF8A47 0%, #FF7A2F 100%);
+  border-color: #FF7A2F;
+  color: #FFFFFF;
+  font-weight: 600;
+  transform: scale(1.02);
+  box-shadow: 0 3px 8px rgba(255, 122, 47, 0.3), inset 0 1px 2px rgba(255, 255, 255, 0.2);
+}
+
+/* ========================================
+   DARK MODE STATES
+   ======================================== */
+
+/* Default State - Dark */
+.menu-dark .menu-tag {
+  background: linear-gradient(135deg, #1B1D31 0%, #151728 100%);
+  border-color: #2A2C44;
+  color: #E5E7EB;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.05);
+}
+
+/* Hover State - Dark */
+.menu-dark .menu-tag:hover {
+  background: linear-gradient(135deg, #1B1D31 0%, #0F1120 100%);
+  border-color: #6366F1;
+  color: #FFFFFF;
+  transform: scale(1.02);
+  box-shadow: 0 2px 6px rgba(99, 102, 241, 0.25), inset 0 1px 1px rgba(255, 255, 255, 0.08);
+}
+
+/* Active State - Dark */
+.menu-dark .menu-tag.active {
+  background: linear-gradient(135deg, #FF7A2F 0%, #F06624 100%);
+  border-color: #FF7A2F;
+  color: #FFFFFF;
+  font-weight: 600;
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(255, 122, 47, 0.4), inset 0 1px 2px rgba(255, 255, 255, 0.25);
+}
+
+/* ========================================
+   FOCUS & ACCESSIBILITY
+   ======================================== */
+
+.menu-tag:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(255, 122, 47, 0.4);
+}
+
+.menu-tag:focus-visible {
+  outline: 2px solid #FF7A2F;
+  outline-offset: 2px;
+}
+
+/* Active/Press State */
+.menu-tag:active {
+  transform: scale(0.98);
+}
+
+/* Disabled State */
+.menu-tag:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* ========================================
+   MOBILE SCROLL PATTERN (Optional)
+   ======================================== */
+
+@media (max-width: 639px) {
+  .menu-tag-wrapper {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 8px;
+  }
+
+  .menu-tag-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+
+  .menu-tag {
+    flex-shrink: 0;
+  }
+}

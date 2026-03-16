@@ -1,0 +1,398 @@
+/* ========================================
+   SIDEBAR NAVIGATION - GENRES SIDEBAR
+   ======================================== */
+
+/* Base Sidebar Styles */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 72px;
+  padding: 24px 20px;
+  /* border-radius: 0 24px 24px 0; */
+  z-index: 1000;
+  transition: all 0.3s ease;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Mobile - Full Width Genres */
+@media (max-width: 768px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 16px;
+    margin-top: 0;
+  }
+}
+
+/* Responsive Width */
+@media (min-width: 640px) {
+  .sidebar {
+    width: 240px;
+  }
+}
+
+@media (min-width: 768px) {
+  .sidebar {
+    width: 260px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .sidebar {
+    width: 280px;
+  }
+}
+
+/* Hide scrollbar but keep functionality */
+.sidebar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.3);
+  border-radius: 2px;
+}
+
+/* Light Mode Background */
+.sidebar-light {
+  background: linear-gradient(180deg, #FFFFFF 0%, #F7F8FB 100%);
+  box-shadow: 2px 0 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Dark Mode Background */
+.sidebar-dark {
+  background: linear-gradient(180deg, #141526 0%, #0D0E1A 100%);
+  box-shadow: 2px 0 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Sidebar Content Container */
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Mobile - Horizontal scrollable layout */
+@media (max-width: 768px) {
+  .sidebar-content {
+    height: auto;
+  }
+  
+  .sidebar-menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
+}
+
+/* Section Styles */
+.sidebar-section {
+  margin-top: 20px;
+}
+
+.sidebar-section:first-child {
+  margin-top: 0;
+}
+
+/* Section Label */
+.sidebar-section-label {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  opacity: 0.7;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  text-transform: uppercase;
+  display: none;
+}
+
+/* Mobile - Hide section labels */
+@media (max-width: 768px) {
+  .sidebar-section-label {
+    display: none !important;
+  }
+}
+
+@media (min-width: 640px) {
+  .sidebar-section-label {
+    display: block;
+  }
+}
+
+/* Light mode section label */
+.sidebar-light .sidebar-section-label {
+  color: #6B7280;
+}
+
+/* Dark mode section label */
+.sidebar-dark .sidebar-section-label {
+  color: #9CA3AF;
+}
+
+/* Menu List */
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 0;
+}
+
+/* Menu Item Button */
+.sidebar-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  height: 44px;
+  padding: 0 10px;
+  border: none;
+  border-radius: 10px;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+/* Mobile - Pill style buttons */
+@media (max-width: 768px) {
+  .sidebar-item {
+    width: auto;
+    height: 36px;
+    padding: 8px 16px;
+    border-radius: 18px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    gap: 8px;
+  }
+  
+  .sidebar-icon {
+    display: none !important;
+  }
+  
+  .sidebar-label {
+    display: inline !important;
+    font-size: 13px;
+  }
+  
+  .active-indicator {
+    display: none;
+  }
+}
+
+/* Icon Styles */
+.sidebar-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  transition: color 0.12s ease;
+}
+
+/* Label Styles */
+.sidebar-label {
+  display: none;
+  white-space: nowrap;
+  transition: color 0.12s ease;
+}
+
+@media (min-width: 640px) {
+  .sidebar-label {
+    display: inline;
+  }
+}
+
+/* Active Indicator - Vertical Pill */
+.active-indicator {
+  position: absolute;
+  right: 10px;
+  width: 3px;
+  height: 18px;
+  border-radius: 999px;
+  animation: slideIn 0.18s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ========================================
+   LIGHT MODE STATES
+   ======================================== */
+
+/* Default State - Light */
+.sidebar-light .sidebar-item {
+  color: #6B7280;
+}
+
+.sidebar-light .sidebar-icon {
+  color: #9CA3AF;
+}
+
+/* Hover State - Light */
+.sidebar-light .sidebar-item:hover {
+  background: rgba(156, 163, 175, 0.08);
+  color: #374151;
+}
+
+.sidebar-light .sidebar-item:hover .sidebar-icon {
+  color: #374151;
+}
+
+/* Active State - Light */
+.sidebar-light .sidebar-item.active {
+  color: #FF7A2F;
+  background: rgba(255, 122, 47, 0.08);
+}
+
+.sidebar-light .sidebar-item.active .sidebar-icon {
+  color: #FF7A2F;
+}
+
+.sidebar-light .active-indicator {
+  background: #FF7A2F;
+  box-shadow: 0 0 8px rgba(255, 138, 71, 0.4);
+}
+
+/* ========================================
+   DARK MODE STATES
+   ======================================== */
+
+/* Default State - Dark */
+.sidebar-dark .sidebar-item {
+  color: #9CA3AF;
+}
+
+.sidebar-dark .sidebar-icon {
+  color: #9CA3AF;
+}
+
+/* Hover State - Dark */
+.sidebar-dark .sidebar-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: #E5E7EB;
+}
+
+.sidebar-dark .sidebar-item:hover .sidebar-icon {
+  color: #E5E7EB;
+}
+
+/* Active State - Dark */
+.sidebar-dark .sidebar-item.active {
+  color: #FFA873;
+  background: rgba(255, 168, 115, 0.1);
+}
+
+.sidebar-dark .sidebar-item.active .sidebar-icon {
+  color: #FFA873;
+}
+
+.sidebar-dark .active-indicator {
+  background: #FFA873;
+  box-shadow: 0 0 10px rgba(255, 168, 115, 0.5);
+}
+
+/* ========================================
+   SPACER & LAYOUT
+   ======================================== */
+
+.sidebar-spacer {
+  flex-grow: 1;
+  min-height: 20px;
+}
+
+/* ========================================
+   FOCUS & ACCESSIBILITY
+   ======================================== */
+
+.sidebar-item:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(255, 122, 47, 0.4);
+}
+
+.sidebar-item:focus-visible {
+  outline: 2px solid #FF7A2F;
+  outline-offset: 2px;
+}
+
+/* ========================================
+   MOBILE COLLAPSED STATE
+   ======================================== */
+
+@media (max-width: 639px) {
+  .sidebar {
+    align-items: center;
+  }
+  
+  .sidebar-item {
+    justify-content: center;
+    padding: 0;
+    width: 44px;
+  }
+  
+  .active-indicator {
+    right: 4px;
+  }
+}
+
+/* ========================================
+   SMOOTH TRANSITIONS
+   ======================================== */
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.sidebar-item:active {
+  transform: scale(0.98);
+}
+
+/* ========================================
+   LEGACY NAV STYLES (Keep for Nav.tsx)
+   ======================================== */
+
+.darkComponent {
+    background-color: rgb(29,31,42) !important;
+    color: white !important;
+}
+
+.input-dark::placeholder {
+    color: #adb5bd !important;
+}
+
+.darkInput {
+    border-radius: 20px !important;
+    overflow: hidden !important;
+}
+
+.darkInput .input-group-text {
+    background-color: rgb(37,41,51) !important;
+    color: white !important;
+    border-color: #495057 !important;
+}
+
+.darkInput .form-control {
+    background-color: rgb(37,41,51) !important;
+    color: white !important;
+    border-color: #495057 !important;
+}
+
+.darkInput .form-control::placeholder {
+    color: #adb5bd !important;
+}

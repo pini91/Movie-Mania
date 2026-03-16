@@ -1,0 +1,80 @@
+/* Main App Layout Adjustments for Sidebar */
+
+/* Push content to the right of the sidebar */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* App Container with Theme Backgrounds */
+.app-light,
+.app-dark {
+  min-height: 100vh;
+  transition: background 0.3s ease;
+}
+
+/* Light Mode Background - Matches components */
+.app-light {
+  background: linear-gradient(180deg, #F9FAFB 0%, #F3F4F6 50%, #E5E7EB 100%);
+}
+
+/* Dark Mode Background - Matches components */
+.app-dark {
+    /* background-color: (0.005,0.004,0.009); */
+  background: linear-gradient(180deg, #0F172A 0%, #1F2937 50%, #111827 100%);
+}
+
+/* Main content wrapper - adjust for sidebar (Genres is now sidebar) */
+#root {
+  margin-left: 72px;
+  transition: margin-left 0.3s ease;
+  min-height: 100vh;
+}
+
+/* Mobile - No sidebar margin */
+@media (max-width: 768px) {
+  #root {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 640px) {
+  #root {
+    margin-left: 240px;
+  }
+}
+
+@media (min-width: 768px) {
+  #root {
+    margin-left: 260px;
+  }
+}
+
+@media (min-width: 1024px) {
+  #root {
+    margin-left: 280px;
+  }
+}
+
+/* Ensure content has proper spacing */
+.container-fluid {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* Main content area */
+main {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Mobile - Adjust main content */
+@media (max-width: 768px) {
+  main {
+    padding: 10px;
+    margin: 0;
+    max-width: 100%;
+  }
+}

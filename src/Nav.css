@@ -1,0 +1,52 @@
+.darkComponent {
+    background: linear-gradient(180deg, #1B1D31 0%, #151728 50%, #0F1120 100%) !important;
+    color: white !important;
+}
+
+/* Mobile Navigation Styles */
+@media (max-width: 768px) {
+  nav {
+    padding: 8px 12px !important;
+  }
+  
+  nav img {
+    display: none !important;
+  }
+  
+  nav .d-flex.align-items-center:last-child {
+    display: none !important;
+  }
+  
+  nav .input-group {
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+}
+
+/* Additional Nav styles */
+
+
+.input-dark::placeholder {
+    color: #adb5bd !important;
+}
+
+.darkInput {
+    border-radius: 20px !important;
+    overflow: hidden !important;
+}
+
+.darkInput .input-group-text {
+    background-color: rgb(37,41,51) !important;
+    color: white !important;
+    border-color: #495057 !important;
+}
+
+.darkInput .form-control {
+    background-color: rgb(37,41,51) !important;
+    color: white !important;
+    border-color: #495057 !important;
+}
+
+.darkInput .form-control::placeholder {
+    color: #adb5bd !important;
+}
