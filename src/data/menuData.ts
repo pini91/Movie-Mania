@@ -5,13 +5,13 @@ import {
   faHouse,
   faCompass,
   faBarcode,
-  faBox,
-  faClock,
-  faHeart,
+  // faBox,
+  // faClock,
+  // faHeart,
   faAward,
   faGear,
   faHeadphones,
-  faRightFromBracket
+  // faRightFromBracket
 } from '@fortawesome/free-solid-svg-icons';
 
 export interface MenuItem {
