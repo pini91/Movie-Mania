@@ -51,7 +51,7 @@ function App() {
   return (
     <>
       <Menu mode={mode} />
-      {/* Your other components */}
+      {/* Other components */}
     </>
   );
 }
@@ -200,12 +200,11 @@ Also update `App.css` to match sidebar widths.
 ## Future Enhancements
 
 - [ ] Add route integration (React Router)
-- [ ] Collapsible sections
-- [ ] Search functionality
+- [x] Collapsible sections
+- [x] Search functionality
 - [ ] User profile section at top
 - [ ] Notification badges
-- [ ] Animation prefers-reduced-motion support
-- [ ] RTL (right-to-left) language support
+
 
 ## Credits
 

@@ -226,9 +226,9 @@ transition: opacity 0.3s ease, transform 0.3s ease;
 
 ## Future Enhancements
 
-- [ ] Add fade-in/fade-out animation when showing/hiding
+- [X] Add fade-in/fade-out animation when showing/hiding
 - [ ] Add loading state while image loads
-- [ ] Make image clickable (link to featured content)
+- [X] Make image clickable (link to featured content)
 - [ ] Add caption or title overlay
-- [ ] Support multiple images with carousel
+- [X] Support multiple images with carousel
 - [ ] Add skeleton loader for better UX

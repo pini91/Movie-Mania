@@ -8,9 +8,11 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 interface Props{
   mode: boolean;
   onClick: () => void;
+  searchTerm:string;
+  onSearchChange:(term:string)=>void;
 }
 
-function Nav({ mode, onClick }: Props) {
+function Nav({ mode, onClick, searchTerm, onSearchChange }: Props) {
   return (
     <nav className= {mode?"d-flex align-items-center gap-3 p-2 darkComponent": "d-flex align-items-center gap-3 p-2"}
     >
@@ -41,6 +43,8 @@ function Nav({ mode, onClick }: Props) {
           type="text"
           className="form-control border-start-0"
           placeholder="Search movies..."
+          value={searchTerm} // Mirrors state of what we have typed
+          onChange={(el)=> onSearchChange(el.target.value)} // Update parent 
           style={{
             borderRadius: '0 20px 20px 0',
             border: '1px solid #ced4da',

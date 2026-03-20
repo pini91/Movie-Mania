@@ -259,8 +259,8 @@ App.tsx
 ## Future Enhancements
 
 - [ ] Add search for genres in sidebar
-- [ ] Collapsible sidebar toggle button
-- [ ] Organize menu tags by category
-- [ ] Add tooltips on hover
+- [X] Collapsible sidebar toggle button
+- [X] Organize menu tags by category
+- [X] Add tooltips on hover
 - [ ] Implement keyboard shortcuts
 - [ ] Add genre icons (unique per genre)

@@ -12,8 +12,8 @@
 │                             │
 │  [Library Section]          │
 │  📦 Watch later             │
-│  🕐 History                 │
-│  ❤️  Liked                  │
+<!-- │  🕐 History                 │ -->
+<!-- │  ❤️  Liked                  │ -->
 │  🏆 Top rated               │
 │                             │
 │  [General Section]          │
@@ -22,7 +22,7 @@
 │                             │
 │                             │  ← Spacer (flex-grow)
 │                             │
-│  🚪 Logout                  │
+<!-- │  🚪 Logout                  │ -->
 │                             │
 └─────────────────────────────┘
 ```
@@ -38,8 +38,8 @@
 │  📦  │
 │      │
 │  📦  │
-│  🕐  │
-│  ❤️   │
+<!-- │  🕐  │ -->
+<!-- │  ❤️   │ -->
 │  🏆  │
 │      │
 │  ⚙️   │

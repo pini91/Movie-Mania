@@ -16,7 +16,11 @@ interface Props {
 
 function Genres({ genres, mode, activeGenre, onGenreClick }: Props) {
   const handleGenreClick = (genreId: number) => {
-    onGenreClick(activeGenre === genreId ? null : genreId);
+    if (activeGenre === genreId) {
+        onGenreClick(null);  // clear
+    } else {
+        onGenreClick(genreId);  // set
+    }
   };
 
   return (
