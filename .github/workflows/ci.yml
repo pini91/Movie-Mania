@@ -33,7 +33,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6.0.2
         with:
           fetch-depth: 0 # Needed for secret scanning
 
@@ -62,7 +62,7 @@ jobs:
      # Always run tests - let concurrency control handle duplicates
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6.0.2
       - uses: actions/setup-node@v4
         with:
           node-version: '18'
@@ -78,7 +78,7 @@ jobs:
     needs: [lint-and-security, test]
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6.0.2
       - uses: actions/setup-node@v4
         with:
           node-version: 18

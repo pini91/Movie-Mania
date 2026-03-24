@@ -4,6 +4,8 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm ci
 COPY . .
+ARG VITE_AUTHENTICATION_URL
+ENV VITE_AUTHENTICATION_URL=$VITE_AUTHENTICATION_URL
 RUN npm run build
 
 # Serve stage
