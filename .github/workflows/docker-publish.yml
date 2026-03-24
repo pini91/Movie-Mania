@@ -48,3 +48,10 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
           build-args: |
             VITE_AUTHENTICATION_URL=${{ secrets.VITE_AUTHENTICATION_URL }}
+
+      - name: Trigger Railway redeploy
+        run: |
+          curl -sf -X POST "https://backboard.railway.com/graphql/v2" \
+            -H "Authorization: Bearer ${{ secrets.RAILWAY_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            -d '{"query":"mutation { serviceInstanceRedeploy(serviceId: \"${{ vars.RAILWAY_SERVICE_ID }}\", environmentId: \"${{ vars.RAILWAY_ENVIRONMENT_ID }}\") }"}'
