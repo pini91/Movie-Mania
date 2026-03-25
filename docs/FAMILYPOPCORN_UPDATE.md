@@ -223,6 +223,7 @@ transition: opacity 0.3s ease, transform 0.3s ease;
 - [x] Hover effect works
 - [x] No TypeScript errors
 - [x] No console errors
+- [ ] Universal title search, not only by title and genre
 
 ## Future Enhancements
 

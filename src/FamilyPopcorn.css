@@ -42,15 +42,15 @@
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .family-popcorn {
+  /* .family-popcorn {
     display: none;
-  }
+  } */
 }
 
 @media (max-width: 640px) {
-  .family-popcorn {
+  /* .family-popcorn {
     display: none;
-  }
+  } */
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {

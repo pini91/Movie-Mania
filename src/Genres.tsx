@@ -15,6 +15,7 @@ interface Props {
 }
 
 function Genres({ genres, mode, activeGenre, onGenreClick }: Props) {
+  
   const handleGenreClick = (genreId: number) => {
     if (activeGenre === genreId) {
         onGenreClick(null);  // clear

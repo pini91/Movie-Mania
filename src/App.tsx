@@ -17,7 +17,7 @@ function App() {
 
 
   const handleGenreClick = (genreId: number | null) => {
-    console.log('🎬 Genre clicked:', genreId);
+    // console.log('Genre clicked:', genreId);
     setActiveGenre(genreId);
   };
 
@@ -49,7 +49,7 @@ function App() {
     //fetching the movies by genre
 
     useEffect(() => {
-       console.log('Movies useEffect - activeGenre:', activeGenre);
+      //  console.log('Movies useEffect - activeGenre:', activeGenre);
       
       if (!activeGenre) {
         setMovies([]);
@@ -68,7 +68,7 @@ function App() {
       fetch(url, options)
         .then(res => res.json())
         .then(data => {
-          console.log('Movies data:', data.results);
+          // console.log('Movies data:', data.results);
           setMovies(data.results);
         })
         .catch(err => console.log(err));

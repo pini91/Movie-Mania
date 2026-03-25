@@ -25,14 +25,35 @@
     height: auto;
     padding: 16px;
     margin-top: 0;
+    overflow-x: hidden;
   }
 }
 
 /* Responsive Width */
-@media (min-width: 640px) {
+
+@media (min-width: 640px) and (max-width: 767px) {
   .sidebar {
-    width: 240px;
+    width: 100%;
+    padding: 16px 8px;
   }
+  
+  .sidebar-menu {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    gap: 8px;
+    padding: 8px 16px;
+    -webkit-overflow-scrolling: touch;  /* Smooth iOS scroll */
+  }
+  
+  .sidebar-item {
+    flex-shrink: 0;
+    min-width: 85px;
+    padding: 8px 16px !important;
+    height: 40px;
+  }
+ 
 }
 
 @media (min-width: 768px) {
@@ -74,22 +95,6 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-}
-
-/* Mobile - Horizontal scrollable layout */
-@media (max-width: 768px) {
-  .sidebar-content {
-    height: auto;
-  }
-  
-  .sidebar-menu {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 8px;
-    overflow-x: auto;
-    padding-bottom: 8px;
-  }
 }
 
 /* Section Styles */
@@ -207,7 +212,8 @@
 
 @media (min-width: 640px) {
   .sidebar-label {
-    display: inline;
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -232,9 +238,9 @@
   }
 }
 
-/* ========================================
+/*
    LIGHT MODE STATES
-   ======================================== */
+*/
 
 /* Default State - Light */
 .sidebar-light .sidebar-item {
@@ -270,9 +276,9 @@
   box-shadow: 0 0 8px rgba(255, 138, 71, 0.4);
 }
 
-/* ========================================
+/* 
    DARK MODE STATES
-   ======================================== */
+ */
 
 /* Default State - Dark */
 .sidebar-dark .sidebar-item {
@@ -308,18 +314,18 @@
   box-shadow: 0 0 10px rgba(255, 168, 115, 0.5);
 }
 
-/* ========================================
+/*
    SPACER & LAYOUT
-   ======================================== */
+ */
 
 .sidebar-spacer {
   flex-grow: 1;
   min-height: 20px;
 }
 
-/* ========================================
+/*
    FOCUS & ACCESSIBILITY
-   ======================================== */
+*/
 
 .sidebar-item:focus {
   outline: none;
@@ -331,29 +337,46 @@
   outline-offset: 2px;
 }
 
-/* ========================================
-   MOBILE COLLAPSED STATE
-   ======================================== */
+/* 
+   Mobile - Full Width (0-639px)
+*/
 
 @media (max-width: 639px) {
   .sidebar {
-    align-items: center;
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 12px 0;  /* Remove side padding */
+    margin: 0 !important;
+    overflow-x: hidden;
   }
+  
+  .sidebar-menu {
+    display: flex !important;;
+    flex-direction: row !important;;
+    flex-wrap: nowrap !important;
+    gap: 8px;
+    overflow-x: auto !important;;
+    padding: 8px 16px;  /* Consistent padding */
+    scrollbar-width: none;  /* Hide Firefox scrollbar */
+  }
+  
+  .sidebar-menu::-webkit-scrollbar { display: none; }  /* Hide Chrome scrollbar */
   
   .sidebar-item {
-    justify-content: center;
-    padding: 0;
-    width: 44px;
-  }
-  
-  .active-indicator {
-    right: 4px;
+    min-width: 80px;  /* Prevent squish */
+    height: 36px;
+    padding: 0 12px !important;  /* Fixed padding */
+    font-size: 12px;
+    white-space: nowrap;
+    flex-shrink: 0;
   }
 }
 
-/* ========================================
+
+/*
    SMOOTH TRANSITIONS
-   ======================================== */
+*/
 
 * {
   -webkit-tap-highlight-color: transparent;
@@ -363,9 +386,9 @@
   transform: scale(0.98);
 }
 
-/* ========================================
+/* 
    LEGACY NAV STYLES (Keep for Nav.tsx)
-   ======================================== */
+*/
 
 .darkComponent {
     background-color: rgb(29,31,42) !important;

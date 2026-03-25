@@ -9,7 +9,7 @@ interface MovieModalProps {
 
 const MovieModal = ({ movie, onClose, mode }: MovieModalProps) => {
   if (!movie) return null;
-  console.log(movie) // to see the movie's whole data
+  //console.log(movie) // to see the movie's whole data
 
   // Close on ESC key
   useEffect(() => {
