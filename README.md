@@ -103,17 +103,13 @@ Runs on push to `main` (also triggerable manually):
 
 #### Required GitHub Secrets
 
-| Name | Description |
-|------|-------------|
-| `VITE_AUTHENTICATION_URL` | TMDB Bearer token for the Vite build |
-| `RAILWAY_TOKEN` | Railway API token (Account → Tokens) |
+`VITE_AUTHENTICATION_URL`
+`RAILWAY_TOKEN` 
 
 #### Required GitHub Variables
 
-| Name | Description |
-|------|-------------|
-| `RAILWAY_SERVICE_ID` | Found in the Railway service URL |
-| `RAILWAY_ENVIRONMENT_ID` | Found in the Railway service URL |
+`RAILWAY_SERVICE_ID` 
+`RAILWAY_ENVIRONMENT_ID`
 
 ## Project Structure
 
