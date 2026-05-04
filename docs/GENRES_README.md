@@ -339,7 +339,7 @@ function App() {
 - [ ] Genre color coding (unique color per genre)
 - [ ] Animation entrance effects
 - [ ] Favorites/pinned genres
-- [ ] Search/filter within genres
+- [x] Search/filter within genres
 
 ## Files Structure
 
