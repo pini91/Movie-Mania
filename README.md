@@ -52,11 +52,7 @@ npm install
 
 ### Environment Variables
 
-Create a `.env` file in the project root:
-
-```env
-VITE_AUTHENTICATION_URL="Bearer YOUR_TMDB_TOKEN_HERE"
-```
+Create a `.env` file in the project root with your VITE_AUTHENTICATION_URL.
 
 > Never commit this file — it is already covered by `.gitignore`.
 
