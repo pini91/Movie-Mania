@@ -1,6 +1,6 @@
 # 🍿 Movie Mania
 
-A React + TypeScript movie browser powered by the [TMDB API](https://www.themoviedb.org/). Browse movies by genre, search by title, and view detailed information in a modal — with full light/dark mode support.
+A React + TypeScript movie browser powered by the [TMDB API](https://www.themoviedb.org/). Browse movies by genre, search by title, and view detailed information in a modal with full light/dark mode support.
 
 **Live Demo:** [movie-mania-production.up.railway.app](https://movie-mania-production.up.railway.app/)
 
